@@ -7,7 +7,9 @@ macro_rules! consume_path_only {
 }
 
 macro_rules! consume_path_only_as_path_then_pass_down_as_tt {
-    ($lint_path:path) => {};
+    ($lint_path:path) => {
+        consume_tt_only!($lint_path);
+    };
 }
 
 macro_rules! consume_tt_only {
